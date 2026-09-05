@@ -1,0 +1,225 @@
+Let's make a game!
+name:loft clicker
+by:arandomexican
+created:1/8/2025
+ 
+Includes
+ 
+Buttons
+*loftMainButton
+icon:https://i.postimg.cc/v8fnnJ1C/loft.png
+name:loft!!!!
+desc:he's loft!!! he gives you cheeseburger apocalypses when you pet him
+class:bigButton hasFlares
+on click:
+yield 1 cheeseburger
+clickspeedachgiver = clickspeedachgiver + 1
+if ((clickspeedachgiver:ps) <= -10) yield clickspeedach1
+end
+tag:loft
+*woftMainButton
+icon:https://i.postimg.cc/43VvC51d/woft.png
+name:woft!!!!
+desc:he's woft!!! he's paying woft enjoyer with a hotdog for every time he pets woft, mostly because he does a good job. help woft enjoyer!!!!!
+class:bigButton hasFlares
+on click:
+yield 1 hotdog
+clickspeedachgiver = clickspeedachgiver + 1
+if ((clickspeedachgiver:ps) <= -10) yield clickspeedach1
+end
+tag:woft
+passive:multiply hotdog yield of woftMainButton by waterbottlewoftt + 1
+ 
+Resources
+*cheeseburger|burger
+name:cheeseburger
+desc:looks like we got a Cheeseburger A-Pocalypse on our hands
+icon:https://i.postimg.cc/Hnw7CMDT/cheeseburger.png
+tag:loft
+*hotdog
+tag:woft
+name:hotdog
+desc:yummy!!!!
+icon:https://i.postimg.cc/sgtP087q/hotdog.png
+*clickspeedachgiver
+hidden
+name:clickspeedachgiver
+desc:WHY. WHY CAN YOU SEE THIS. IT SHOULD NOT BE VISIBLE
+on tick: 
+lose clickspeedachgiver clickspeedachgiver
+end
+*mode
+hidden
+on load:
+if (mode = 1) hide tag:loft
+if (mode = 0) hide tag:woft
+if (mode = 1) show tag:woft
+if (mode = 0) show tag:loft
+hide tag:shutup
+end
+*woftclickupg
+name:for some reason i need this
+hidden
+*waterbottlewoftt
+hidden
+*lawnmowerwoftt
+hidden
+*shinyburger
+name:Shiny Burgers
+desc:Obtained from collecting a shiny burger!
+icon:https://i.postimg.cc/WpZr0rzk/shinyburger.png
+hidden when 0
+*woftasssistance
+hidden
+tag:shutup
+ 
+Upgrades
+*switchmodes
+name:switch modes
+on earn:
+if (mode = 1) 
+mode = 0
+else 
+if (mode = 0) mode = 1
+end
+lose switchmodes
+if (mode = 1) hide tag:loft
+if (mode = 0) hide tag:woft
+if (mode = 1) show tag:woft
+if (mode = 0) show tag:loft
+end
+*clickUpg1
+name:pet him.
+desc:work it harder
+passive:increase cheeseburger yield of loftMainButton by 1
+req:clickspeedach1
+cost:100 cheeseburger
+tag:loft
+*woftLoftAssistance
+name:Loft Assistance
+desc:loft will help you get more hot dogs!!! boost:[woftclickupg] (formula is cheeseburgers per second divided by 100)
+on tick:woftclickupg = 1 + ((burger:ps) / 100)
+passive:multiply hotdog yield of woftMainButton by (woftclickupg)
+req:clickspeedach1
+cost:100 hotdog
+tag:woft
+*loftPetUpg1
+name:stronger pets
+desc:your loft pets are 2x stronger, collecting 2x more burgers for you!!
+tag:loft
+req:10 loftpet
+passive:multiply cheeseburger yield of loftpet by 2
+cost:100 burger
+*loftPetUpg2
+name:loft pet gym
+desc:your loft pets are even stronger, and their agility is better!!! they are 2x better AGAIN!!!!!!!!!!
+tag:loft
+req:25 loftpet
+cost:5000 burger
+passive:multiply cheeseburger yield of loftpet by 2
+*loftPetUpg3
+name:loft pet trainer trainers
+desc:if the trainers are trained appropriately, the trainers will train the loft pets appropriately!!! i think. (multiplies by four)
+passive:multiply cheeseburger yield of loftpet by 4
+tag:loft
+req:50 loftpet
+cost:100000 burger
+*loftPetUpg4
+name:loft pet trainers
+desc:we forgot to actually get trainers for the loft pets.... whoopsies!!!! (multiplies by 2)
+passive:multiply cheeseburger yield of loftpet by 2
+tag:loft
+req:100 loftpet
+*loftWoftAssistance
+name:Woft Assistance
+desc:woft will help you get more cheeseburgers!!! (This one's good.) (boost:[woftasssistance]) (goes up by +1x every 10x)
+on tick:
+if ((hotdog:max)>=1) woftasssistance = 1
+if ((hotdog:max)>=10) woftasssistance = 2
+if ((hotdog:max)>=100) woftasssistance = 3
+if ((hotdog:max)>=1000) woftasssistance = 4
+if ((hotdog:max)>=10000) woftasssistance = 5
+if ((hotdog:max)>=100000) woftasssistance = 6
+if ((hotdog:max)>=1000000) woftasssistance = 7
+if ((hotdog:max)>=10000000) woftasssistance = 8
+if ((hotdog:max)>=100000000) woftasssistance = 9
+if ((hotdog:max)>=1000000000) woftasssistance = 10
+if ((hotdog:max)>=10000000000) woftasssistance = 11
+if ((hotdog:max)>=100000000000) woftasssistance = 12
+if ((hotdog:max)>=1000000000000) woftasssistance = 13
+if ((hotdog:max)>=10000000000000) woftasssistance = 14
+if ((hotdog:max)>=100000000000000) woftasssistance = 15
+if ((hotdog:max)>=1000000000000000) woftasssistance = 16
+if ((hotdog:max)>=10000000000000000) woftasssistance = 17
+if ((hotdog:max)>=100000000000000000) woftasssistance = 18
+if ((hotdog:max)>=1000000000000000000) woftasssistance = 19
+if ((hotdog:max)>=10000000000000000000) woftasssistance = 20
+end
+passive:multiply burger yield of tag:loftBuilding by (woftasssistance)
+tag:loft
+cost:1 shinyburger
+*loftResortUpg1
+name:fluffier towels
+desc:with fluffier towels, loft will have a better time!!!! approximately 2x better!11!1!!111one!!!!1111
+cost:20000 burger
+req:5 loftresort
+tag:loft
+*woftcps
+name:woft pet
+desc:your loyal companion!!!!!! yay! (except its woft now)
+tag:shutup
+ 
+Buildings
+*loftpet
+name:loft pet
+desc:your loyal companion!!!!!! yay!
+tags:loft loftBuilding
+on tick:yield 1 cheeseburger
+cost:50 burger
+*loftresort
+name:loft resort
+desc:it helps loft relax,,,, so he decides to pay more cheeseburger for your hlep!!!!!one!! (boost:+[loftresort])
+cost:5000 burger
+on tick:yield 20 cheeseburger
+req:10 loftpet
+tag:loft
+tag:loftBuilding
+*woftwaterbottle
+name:water bottle
+desc:woft is getting kinda thirsty... give him some water for more hotdogs!! boost:+[waterbottlewoftt]x (increases by +x[woftwaterbottle] per 100 seconds)
+on tick:yield 0.01 waterbottlewoftt
+cost:100 hotdog
+cost increase:200%
+tag:woft
+*woftlawnmower
+name:lawn mower
+desc:woft needs lawn mowers... buy them and he will give you more hotdawgs!!! boost:+[lawnmowerwoftt]x /l (increases by [woftlawnmower] per 100 seconds)
+cost:12800 hotdog
+on tick:yield 0.05 lawnmowerwoftt
+cost increase:1600%
+tag:shutup
+ 
+Shinies
+*shinyshinyburger
+name:shiny burger
+on click:yield 1 shinyburger
+movement:onRight moveLeft
+frequency:100
+icon:https://i.postimg.cc/g0DwgqRM/shinyshinyburger.png
+ 
+Achievements
+*clickspeedach1
+name:Clicker
+desc:Click 10 times in a second.
+*loftpetamtach1
+name:Loft Tower
+desc:Have 50 loft pets at once.
+req:50 loftpet
+*loftpetamtach2
+name:Loft Tower 2
+desc:Have 100 loft pets at once.
+req:100 loftpet
+*loftpetamtach3
+name:Loft Tower ULTIMATE KRUST
+desc:Have 100 loft pets at once.
+req:200 loftpet
