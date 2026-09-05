@@ -7,7 +7,7 @@ Includes
  
 Buttons
 *loftMainButton
-icon:https://i.postimg.cc/v8fnnJ1C/loft.png
+icon:https://acompleteidiot.github.io/loft-clicker/img/loft.png
 name:loft!!!!
 desc:he's loft!!! he gives you cheeseburger apocalypses when you pet him
 class:bigButton hasFlares
@@ -18,7 +18,7 @@ if ((clickspeedachgiver:ps) <= -10) yield clickspeedach1
 end
 tag:loft
 *woftMainButton
-icon:https://i.postimg.cc/43VvC51d/woft.png
+icon:https://acompleteidiot.github.io/loft-clicker/img/woft.png
 name:woft!!!!
 desc:he's woft!!! he's paying woft enjoyer with a hotdog for every time he pets woft, mostly because he does a good job. help woft enjoyer!!!!!
 class:bigButton hasFlares
@@ -34,13 +34,13 @@ Resources
 *cheeseburger|burger
 name:cheeseburger
 desc:looks like we got a Cheeseburger A-Pocalypse on our hands
-icon:https://i.postimg.cc/Hnw7CMDT/cheeseburger.png
+icon:https://acompleteidiot.github.io/loft-clicker/img/cheeseburger.png
 tag:loft
 *hotdog
 tag:woft
 name:hotdog
 desc:yummy!!!!
-icon:https://i.postimg.cc/sgtP087q/hotdog.png
+icon:https://acompleteidiot.github.io/loft-clicker/img/hotdog.png
 *clickspeedachgiver
 hidden
 name:clickspeedachgiver
@@ -67,7 +67,7 @@ hidden
 *shinyburger
 name:Shiny Burgers
 desc:Obtained from collecting a shiny burger!
-icon:https://i.postimg.cc/WpZr0rzk/shinyburger.png
+icon:https://acompleteidiot.github.io/loft-clicker/img/shinyburger.png
 hidden when 0
 *woftasssistance
 hidden
@@ -205,7 +205,7 @@ name:shiny burger
 on click:yield 1 shinyburger
 movement:onRight moveLeft
 frequency:100
-icon:https://i.postimg.cc/g0DwgqRM/shinyshinyburger.png
+icon:https://acompleteidiot.github.io/loft-clicker/img/shinyshinyburger.png
  
 Achievements
 *clickspeedach1
