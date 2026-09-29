@@ -7,10 +7,7 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
     />
     <meta content="arandomexican" property="og:title" />
-    <meta
-      content="wip"
-      property="og:description"
-    />
+    <meta content="wip" property="og:description" />
     <meta content="#ed620c" data-react-helmet="true" name="theme-color" />
     <meta
       name="keywords"
@@ -18,15 +15,49 @@
     />
     <meta name="color-scheme" content="dark only" />
     <title>arandomexican - home</title>
-    <link rel="icon" type="image/x-icon" href="./img/loftIcon.png?raw=true" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./img/mexicanflagIcon.png?raw=true"
+    />
     <link rel="stylesheet" href="style.css" />
     <!--
   <link href="style.css" rel="stylesheet" type="text/css" /> 
   --></head>
   <!-- cringelord -->
 </html>
-<body class="centeredElements">
-  <h1>yo wassup gamers</h1>
-  <p>here's my github page</p>
-  <p>also here's <a href="/loft-clicker-2">loft clicker 2</a></p>
+<body>
+  <div
+    class="centeredElements fullScreen"
+    style="flex-direction: row; gap: 100px"
+  >
+    <div
+      id="linksButton"
+      class="roundedBox centeredElements clickable"
+      style="
+        border-color: rgb(190, 190, 190);
+        background-image: url(&quot;img/mexicanflagIcon.png?raw=true&quot;);
+        background-size: calc(cover + 10%);
+        background-position: -12px -3px;
+      "
+    >
+      <p class="outlinedText">Links</p>
+    </div>
+    <div class="roundedBox centeredElements">
+      <h1>github page i think</h1>
+      <p>i put things here sometimes</p>
+    </div>
+    <div
+      id="gamesButton"
+      class="roundedBox centeredElements clickable"
+      style="
+        border-color: lemonchiffon;
+        background-image: url(&quot;img/loftIcon.png?raw=true&quot;);
+        background-size: cover;
+      "
+    >
+      <p class="outlinedText">Games</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>

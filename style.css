@@ -1,6 +1,37 @@
 .centeredElements {
     display: flex;
+    flex-direction:column;
     justify-content: center;
     align-items: center;
+}
+
+.fullScreen {
     height: 100vh;
+    width: 100vw;
+}
+.roundedBox {
+    border-radius: 50px;
+    padding: 30px;
+    border: 4px solid rgb(71,71,71);
+    background-color: rgb(100, 100, 100);
+}
+
+body {
+    margin: 0; 
+    min-height: 100%
+}
+
+.outlinedText {
+    text-shadow: 2px 2px rgb(0,0,0);
+}
+
+.clickable {
+    transition: transform 0.2s ease-out, filter 0.2s ease-out, box-shadow 0.2s ease-out
+}
+
+.clickable:hover {
+    transform: scale(1.1);
+    filter: brightness(1.05);
+    box-shadow: 0 0 10px white;
+    cursor: pointer;
 }
